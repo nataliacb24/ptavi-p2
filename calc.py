@@ -28,9 +28,11 @@ if __name__ == "__main__":
         operando2 = int(sys.argv[3])
     except ValueError:
         sys.exit("Error: Non numerical parameters")
-        
-   # except ZeroDivisionError:
-      #  sys.exit("Error: El divisor no puede ser cero")
+    
+    try:
+        operando2 = 0    
+    except ZeroDivisionError:
+       sys.exit("Error: El divisor no puede ser cero")
 
     if sys.argv[2] == "suma":
         result = plus(operando1, operando2)
