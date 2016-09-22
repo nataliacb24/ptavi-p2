@@ -8,10 +8,10 @@ fich = open('/home/alumnos/ncarrill/Escritorio/ptvi/ptavi-p2/fichero', 'r')
 lineas = fich.readlines()
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
 
     calculadora = calcoohija.CalculadoraHija()
-        
+    
     for linea in lineas:
         
         elems = linea[:-1].split(',')
@@ -20,31 +20,30 @@ if __name__ == "_main_":
         op2 = int(elems[2])
 
         if elems[0] == 'suma':
-            resultado1 = calculadora.suma(op1, op2)
+            resultado = calculadora.suma(op1, op2)
        
         elif elems[0] == 'resta':
-            resultado2 = calculadora.resta(op1, op2)
+            resultado = calculadora.resta(op1, op2)
    
         elif elems[0] == 'divide':
-            resultado3 = calculadora.div(op1, op2)
+            resultado = calculadora.div(op1, op2)
 
         elif elems[0] == 'multiplica':
-            resultado4 = calculadora.mult(op1, op2)
-        
-        
+            resultado = calculadora.mult(op1, op2)
+            
         for elem in elems[3:]:
         
             if elems[0] == 'suma':
-                resultado = calculadora.suma(resultado1, int(elem))
-            
+                resultado = calculadora.suma(resultado,int(elem))
+                            
             elif elems[0] == 'resta':
-                resultado = calculadora.resta(resultado2, int(elem))
+                resultado = calculadora.resta(resultado, int(elem))
             
-            elif elems[0] == 'resta':
-                resultado = calculadora.div(resutlado3, int(elem))
+            elif elems[0] == 'divide':
+                resultado = calculadora.div(resultado, int(elem))
             
             elif elems[0] == 'multiplica':
-                resultado = calculadora.div(resultado4, int(elem))
-                
-            print(resultado)
+                resultado = calculadora.mult(resultado, int(elem))
+            
+        print(resultado)
             
