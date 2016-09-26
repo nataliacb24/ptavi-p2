@@ -4,7 +4,6 @@
 import sys
 
 class Calculadora():
-
     def suma(self, op1, op2):
         return op1 + op2
 
@@ -14,11 +13,9 @@ class Calculadora():
 if __name__ == "__main__":
 
     calculadora = Calculadora()
-
     try:
       operando1 = int(sys.argv[1])
       operando2 = int(sys.argv[3])
-
     except ValueError:
         sys.exit("Error: Parametros no numericos")
 

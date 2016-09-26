@@ -4,22 +4,17 @@
 import sys
 
 def plus(op1, op2):
-    """ Function to sum the operands """
     return op1 + op2
 
 def minus(op1, op2):
-    """ Function to substract the operands """
     return op1 - op2
 
-def multiplicar(op1,op2):
-    """ Funcion para multiplicar dos operandos """
+def multiplicar(op1, op2):
     return op1 * op2
 
-def dividir(op1,op2):
-    """Funcion para dividir dos operandos """
+def dividir(op1, op2):
     try:
         return op1/op2    
-
     except ZeroDivisionError:
        sys.exit("Error: El divisor no puede ser cero")
 

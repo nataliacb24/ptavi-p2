@@ -7,7 +7,6 @@ import sys
 fich = open(sys.argv[1], 'r')
 lineas = fich.readlines()
 
-
 if __name__ == '__main__':
 
     calculadora = calcoohija.CalculadoraHija()
