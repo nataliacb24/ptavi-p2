@@ -28,8 +28,8 @@ if __name__ == "__main__":
 
     operando = sys.argv[2]
 
-    operaciones = {'suma': calculadora.suma, 'resta': calculadora.resta,
+    opracions = {'suma': calculadora.suma, 'resta': calculadora.resta,
                    'divide': calculadora.div, 'multiplica': calculadora.mult}
 
-    resultado = operaciones[operando](operando1, operando2)
+    resultado = opracions[operando](operando1, operando2)
     print(resultado)

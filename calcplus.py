@@ -17,14 +17,14 @@ if __name__ == '__main__':
         op1 = int(elems[1])
         op2 = int(elems[2])
 
-        operacions = {'suma': calculadora.suma, 'resta': calculadora.resta,
+        opracions = {'suma': calculadora.suma, 'resta': calculadora.resta,
                       'divide': calculadora.div, 'multiplica': calculadora.mult}
 
         operando = elems[0]
-        resultado = operaciones[operando](op1, op2)
+        resultado = opracions[operando](op1, op2)
 
         for elem in elems[3:]:
 
-            resultado = operaciones[operando](resultado, int(elem))
+            resultado = opracions[operando](resultado, int(elem))
 
         print(resultado)
