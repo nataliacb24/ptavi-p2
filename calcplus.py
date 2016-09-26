@@ -13,7 +13,7 @@ if __name__ == '__main__':
     for linea in lineas:
 
         elems = linea[:-1].split(',')
-        
+
         op1 = int(elems[1])
         op2 = int(elems[2])
 

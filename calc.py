@@ -18,7 +18,7 @@ def multiplicar(op1, op2):
 
 def dividir(op1, op2):
     try:
-        return op1 / op2    
+        return op1 / op2
     except ZeroDivisionError:
         sys.exit("Error: El divisor no puede ser cero")
 
