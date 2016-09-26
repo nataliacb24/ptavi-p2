@@ -19,21 +19,21 @@ def multiplicar(op1,op2):
     
 def dividir(op1,op2):
     """Funcion para dividir dos operandos """
-    return op1 / op2
+    try:
+        return op1/op2    
+        
+    except ZeroDivisionError:
+       sys.exit("Error: El divisor no puede ser cero")
     
 
 if __name__ == "__main__":
+
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
     except ValueError:
         sys.exit("Error: Non numerical parameters")
     
-    try:
-        operando2 = 0    
-    except ZeroDivisionError:
-       sys.exit("Error: El divisor no puede ser cero")
-
     if sys.argv[2] == "suma":
         result = plus(operando1, operando2)
     elif sys.argv[2] == "resta":
