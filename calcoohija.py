@@ -26,15 +26,10 @@ if __name__ == "__main__":
     except ValueError:
         sys.exit("Parametros no numericos")
 
-    if sys.argv[2] == "suma":
-        resultado = calculadora.suma(operando1, operando2)
-    elif sys.argv[2] == "resta":
-        resultado = calculadora.resta(operando1, operando2)
-    elif sys.argv[2] == "dividir":
-        resultado = calculadora.div(operando1, operando2)
-    elif sys.argv[2] == "multiplicar":
-        resultado = calculadora.mult(operando1, operando2)
-    else:
-        sys.exit("Operacion no valida")
+    operando = sys.argv[2]
+    
+    operaciones = {'suma': calculadora.suma, 'resta': calculadora.resta,
+                   'divide': calculadora.div, 'multiplica': calculadora.mult}
 
+    resultado = operaciones[operando](operando1, operando2)
     print(resultado)

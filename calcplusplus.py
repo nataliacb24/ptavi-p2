@@ -14,24 +14,14 @@ with open(sys.argv[1], newline='') as fich:
         op1 = int(linea[1])
         op2 = int(linea[2])
 
-        if linea[0] == 'suma':
-            resultado = calculadora.suma(op1, op2)
-        elif linea[0] == 'resta':
-            resultado = calculadora.resta(op1, op2)
-        elif linea[0] == 'divide':
-            resultado = calculadora.div(op1, op2)
-        elif linea[0] == 'multiplica':
-            resultado = calculadora.mult(op1, op2)
+        operaciones = {'suma': calculadora.suma, 'resta': calculadora.resta,
+                       'divide': calculadora.div, 'multiplica': calculadora.mult}
+
+        operando = linea[0]
+        resultado = operaciones[operando](op1, op2)
 
         for elem in linea[3:]:
-
-            if linea[0] == 'suma':
-                resultado = calculadora.suma(resultado, int(elem))
-            elif linea[0] == 'resta':
-                resultado = calculadora.resta(resultado, int(elem))
-            elif linea[0] == 'divide':
-                resultado = calculadora.div(resultado, int(elem))
-            elif linea[0] == 'multiplica':
-                resultado = calculadora.mult(resultado, int(elem))
-
+        
+            resultado = operaciones[operando](resultado, int(elem))
+        
         print(resultado)
