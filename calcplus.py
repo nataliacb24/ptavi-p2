@@ -17,8 +17,8 @@ if __name__ == '__main__':
         op1 = int(elems[1])
         op2 = int(elems[2])
 
-        operaciones = {'suma': calculadora.suma, 'resta': calculadora.resta,
-                       'divide': calculadora.div, 'multiplica': calculadora.mult}
+        operacions = {'suma': calculadora.suma, 'resta': calculadora.resta,
+                      'divide': calculadora.div, 'multiplica': calculadora.mult}
 
         operando = elems[0]
         resultado = operaciones[operando](op1, op2)

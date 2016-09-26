@@ -14,7 +14,7 @@ with open(sys.argv[1], newline='') as fich:
         op1 = int(linea[1])
         op2 = int(linea[2])
 
-        operaciones = {'suma': calculadora.suma, 'resta': calculadora.resta,
+        operacions = {'suma': calculadora.suma, 'resta': calculadora.resta,
                       'divide': calculadora.div, 'multiplica': calculadora.mult}
 
         operando = linea[0]
