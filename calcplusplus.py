@@ -26,7 +26,7 @@ with open(sys.argv[1], newline='') as fich:
         for elem in linea[3:]:
 
             if linea[0] == 'suma':
-                resultado = calculadora.suma(resultado,int(elem))
+                resultado = calculadora.suma(resultado, int(elem))
             elif linea[0] == 'resta':
                 resultado = calculadora.resta(resultado, int(elem))
             elif linea[0] == 'divide':
