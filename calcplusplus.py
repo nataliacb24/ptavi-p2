@@ -15,7 +15,7 @@ with open(sys.argv[1], newline='') as fich:
         op2 = int(linea[2])
 
         opracions = {'suma': calculadora.suma, 'resta': calculadora.resta,
-                      'divide': calculadora.div, 'multiplica': calculadora.mult}
+                     'divide': calculadora.div, 'multiplica': calculadora.mult}
 
         operando = linea[0]
         resultado = opracions[operando](op1, op2)
