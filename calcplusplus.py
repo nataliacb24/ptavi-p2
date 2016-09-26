@@ -21,7 +21,7 @@ with open(sys.argv[1], newline='') as fich:
         resultado = operaciones[operando](op1, op2)
 
         for elem in linea[3:]:
-        
+
             resultado = operaciones[operando](resultado, int(elem))
-        
+
         print(resultado)

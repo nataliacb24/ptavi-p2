@@ -27,7 +27,7 @@ if __name__ == "__main__":
         sys.exit("Parametros no numericos")
 
     operando = sys.argv[2]
-    
+
     operaciones = {'suma': calculadora.suma, 'resta': calculadora.resta,
                    'divide': calculadora.div, 'multiplica': calculadora.mult}
 
