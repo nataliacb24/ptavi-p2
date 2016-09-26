@@ -4,7 +4,6 @@
 import calcoo
 import sys
 
-
 class CalculadoraHija(calcoo.Calculadora):
 
     def mult(self, op1, op2):
@@ -23,8 +22,7 @@ if __name__ == "__main__":
     try:
       operando1 = int(sys.argv[1])
       operando2 = int(sys.argv[3])
-
-    except VauleError:
+    except ValueError:
       sys.exit("Parametros no numericos")
 
     if sys.argv[2] == "suma":
